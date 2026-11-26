@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Espacio personal para mostrar ejercicios de Java, prácticas, proyectos y recursos de aprendizaje.">
+    <meta name="description" content="LAHU PAGE · Mi espacio de programación: Java, apuntes, ejercicios interactivos y proyectos.">
     <meta name="theme-color" content="#070b14">
-    <title>Java · Registro de aprendizaje</title>
+    <title>LAHU PAGE · Inicio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,10 +16,10 @@
 
     <header class="site-header">
         <nav class="nav container" aria-label="Navegación principal">
-            <a class="brand" href="#inicio" aria-label="Java, ir al inicio">
-                <span class="brand-mark" aria-hidden="true">{ }</span>
-                <span class="brand-name">Java<span class="brand-dot">.</span></span>
-                <span class="brand-tag">learning log</span>
+            <a class="brand" href="#/inicio" aria-label="LAHU PAGE, ir al inicio">
+                <span class="brand-mark" aria-hidden="true">L</span>
+                <span class="brand-name">LAHU<span class="brand-dot"> PAGE</span></span>
+                <span class="brand-tag">by Lahuertix</span>
             </a>
 
             <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Abrir menú">
@@ -27,236 +28,579 @@
 
             <div class="nav-panel" id="nav-panel">
                 <ul class="nav-links">
-                    <li><a href="#inicio" data-nav="inicio">Inicio</a></li>
-                    <li><a href="#programacion" data-nav="programacion">Programación</a></li>
-                    <li><a href="#proyectos" data-nav="proyectos">Proyectos</a></li>
-                    <li><a href="#recursos" data-nav="recursos">Recursos</a></li>
+                    <li><a href="#/inicio" data-page="inicio">Inicio</a></li>
+                    <li><a href="#/java" data-page="java">Java</a></li>
+                    <li><a href="#/ejercicios" data-page="ejercicios">Práctica</a></li>
+                    <li><a href="#/apuntes" data-page="apuntes">Apuntes</a></li>
+                    <li><a href="#/proyectos" data-page="proyectos">Proyectos</a></li>
+                    <li><a href="#/contacto" data-page="contacto">Contacto</a></li>
                 </ul>
-                <a class="nav-cta" href="#ejercicios">Ver ejercicios <span aria-hidden="true">↗</span></a>
+                <a class="nav-cta" href="#/ejercicios">A practicar <span aria-hidden="true">↗</span></a>
             </div>
         </nav>
     </header>
 
-    <div id="contenido">
-        <div id="landing">
-            <main>
-                <section class="hero" id="inicio" aria-labelledby="hero-title">
-                    <div class="container hero-grid">
-                        <div class="hero-copy reveal">
-                            <p class="eyebrow"><span class="eyebrow-dot"></span> Repositorio de aprendizaje · Java</p>
-                            <h1 id="hero-title">Aprender Java, <span class="gradient-text">una línea a la vez.</span></h1>
-                            <p class="hero-lead">
-                                Un lugar tranquilo para guardar ejercicios, practicar conceptos y dejar constancia de cada paso.
-                                Aquí el código se lee, se explode y se mejora.
-                            </p>
-                            <div class="hero-actions">
-                                <a class="btn btn--primary" href="#proyectos">Explorar proyectos <span aria-hidden="true">→</span></a>
-                                <a class="btn btn--ghost" href="#ejercicios">Ver ejercicios Java</a>
-                            </div>
-                            <dl class="hero-stats">
-                                <div><dt>Ejercicios</dt><dd id="stat-exercises">—</dd></div>
-                                <div><dt>Lenguaje activo</dt><dd>Java</dd></div>
-                                <div><dt>Dependencias</dt><dd>0</dd></div>
-                            </dl>
+    <main id="contenido">
+        <!-- ============ PÁGINA: INICIO ============ -->
+        <div class="page" data-page-panel="inicio">
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="container hero-grid">
+                    <div class="hero-copy reveal">
+                        <p class="eyebrow"><span class="eyebrow-dot"></span> LAHU PAGE · Mi web de programación</p>
+                        <h1 id="hero-title">Todo mi aprendizaje, <span class="gradient-text">en un solo sitio.</span></h1>
+                        <p class="hero-lead">
+                            Aquí guardo mi código, practico, consulto los apuntes y voy añadiendo proyectos.
+                            Cada apartado es una página distinta, pero todo vive bajo el mismo nombre: <strong>LAHU PAGE</strong>.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="btn btn--primary" href="#/java">Explorar Java <span aria-hidden="true">→</span></a>
+                            <a class="btn btn--ghost" href="#/ejercicios">Hacer ejercicios</a>
                         </div>
-
-                        <div class="hero-visual reveal" aria-hidden="true">
-                            <div class="code-window">
-                                <div class="code-window__bar">
-                                    <span class="window-dots"><i></i><i></i><i></i></span>
-                                    <span class="window-title">Learning.java</span>
-                                    <span class="window-lang">JAVA</span>
-                                </div>
-                                <pre class="code-window__body"><code><span class="code-line"><span class="line-no">01</span><span class="tok-keyword">public class</span> <span class="tok-type">Learning</span> {</span><span class="code-line"><span class="line-no">02</span>    <span class="tok-keyword">public static void</span> <span class="tok-method">main</span>(<span class="tok-type">String</span>[] args) {</span><span class="code-line"><span class="line-no">03</span>        <span class="tok-type">String</span> idea = <span class="tok-string">"practicar hoy"</span>;</span><span class="code-line"><span class="line-no">04</span>        <span class="tok-keyword">if</span> (idea != <span class="tok-keyword">null</span>) {</span><span class="code-line"><span class="line-no">05</span>            <span class="tok-type">System</span>.out.println(idea);</span><span class="code-line"><span class="line-no">06</span>        }</span><span class="code-line"><span class="line-no">07</span>    }</span><span class="code-line"><span class="line-no">08</span>}</span></code></pre>
-                            </div>
-                            <div class="floating-chip floating-chip--top"><span class="chip-icon">{ }</span><span id="hero-count">Detectando ejercicios…</span></div>
-                            <div class="floating-chip floating-chip--bottom"><span class="chip-icon">↳</span> compila · aprende · repite</div>
-                        </div>
+                        <dl class="hero-stats">
+                            <div><dt>Ejercicios Java</dt><dd id="stat-exercises">—</dd></div>
+                            <div><dt>Apuntes</dt><dd>7</dd></div>
+                            <div><dt>Dependencias</dt><dd>0</dd></div>
+                        </dl>
                     </div>
-                    <div class="container hero-scroll" aria-hidden="true"><span></span> desliza para explorar</div>
-                </section>
 
-                <section class="section section--alt" id="programacion" aria-labelledby="programacion-title">
-                    <div class="container">
-                        <div class="section-heading reveal">
-                            <p class="eyebrow">01 / Programación</p>
-                            <h2 id="programacion-title">Lenguajes y <span class="gradient-text">prácticas</span></h2>
-                            <p class="section-lead">Java es el punto de partida. La estructura está preparada para crecer con nuevos lenguajes cuando llegue el momento.</p>
-                        </div>
-
-                        <div class="language-grid reveal">
-                            <article class="language-card language-card--active">
-                                <div class="language-card__top">
-                                    <span class="language-glyph">JAVA</span>
-                                    <span class="status-pill status-pill--active"><span></span> Activo</span>
-                                </div>
-                                <h3>Java</h3>
-                                <p>Ejercicios de consola, estructuras de control, clases y lógica. Código real del repositorio, legible desde el navegador.</p>
-                                <div class="language-card__footer">
-                                    <span id="language-count">— archivos .java</span>
-                                    <a href="#ejercicios">Explorar <span aria-hidden="true">→</span></a>
-                                </div>
-                            </article>
-                            <article class="language-card language-card--soon">
-                                <div class="language-card__top">
-                                    <span class="language-glyph">PY</span>
-                                    <span class="status-pill">Próximamente</span>
-                                </div>
-                                <h3>Python</h3>
-                                <p>Espacio reservado para futuros ejercicios y apuntes.</p>
-                            </article>
-                            <article class="language-card language-card--soon">
-                                <div class="language-card__top">
-                                    <span class="language-glyph">JS</span>
-                                    <span class="status-pill">Próximamente</span>
-                                </div>
-                                <h3>JavaScript</h3>
-                                <p>Espacio reservado para prácticas web y lógica de interfaz.</p>
-                            </article>
-                        </div>
-
-                        <div class="exercises-panel" id="ejercicios">
-                            <div class="exercises-head reveal">
-                                <div>
-                                    <p class="eyebrow">Ejercicios del repositorio</p>
-                                    <h3>Explora el código fuente</h3>
-                                </div>
-                                <label class="search-box">
-                                    <span aria-hidden="true">⌕</span>
-                                    <input type="search" id="search-input" placeholder="Buscar archivo o descripción…" aria-label="Buscar ejercicios">
-                                </label>
+                    <div class="hero-visual reveal" aria-hidden="true">
+                        <div class="code-window">
+                            <div class="code-window__bar">
+                                <span class="window-dots"><i></i><i></i><i></i></span>
+                                <span class="window-title">Learning.java</span>
+                                <span class="window-lang">JAVA</span>
                             </div>
-
-                            <div class="exercises-toolbar reveal" role="group" aria-label="Filtrar ejercicios">
-                                <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">Todos <span id="filter-all-count">0</span></button>
-                                <button class="filter-btn" type="button" data-filter="Problemas" aria-pressed="false">Problemas <span id="filter-problems-count">0</span></button>
-                                <button class="filter-btn" type="button" data-filter="Prácticas" aria-pressed="false">Prácticas <span id="filter-practices-count">0</span></button>
-                            </div>
-
-                            <div class="exercise-grid" id="exercise-grid" aria-live="polite">
-                                <noscript>
-                                    <p class="notice">Activa JavaScript para consultar los ejercicios desde esta página. también puedes abrir los archivos <code>.java</code> directamente en el repositorio.</p>
-                                </noscript>
-                            </div>
-                            <p class="exercise-status" id="exercise-status" role="status">Preparando ejercicios…</p>
+                            <pre class="code-window__body"><code><span class="code-line"><span class="line-no">01</span><span class="tok-keyword">public class</span> <span class="tok-type">Learning</span> {</span><span class="code-line"><span class="line-no">02</span>    <span class="tok-keyword">public static void</span> <span class="tok-method">main</span>(<span class="tok-type">String</span>[] args) {</span><span class="code-line"><span class="line-no">03</span>        <span class="tok-type">String</span> idea = <span class="tok-string">"practicar hoy"</span>;</span><span class="code-line"><span class="line-no">04</span>        <span class="tok-keyword">if</span> (idea != <span class="tok-keyword">null</span>) {</span><span class="code-line"><span class="line-no">05</span>            <span class="tok-type">System</span>.out.println(idea);</span><span class="code-line"><span class="line-no">06</span>        }</span><span class="code-line"><span class="line-no">07</span>    }</span><span class="code-line"><span class="line-no">08</span>}</span></code></pre>
                         </div>
+                        <div class="floating-chip floating-chip--top"><span class="chip-icon">L</span><span id="hero-count">Detectando ejercicios…</span></div>
+                        <div class="floating-chip floating-chip--bottom"><span class="chip-icon">↳</span> compila · aprende · repite</div>
                     </div>
-                </section>
+                </div>
+                <div class="container hero-scroll" aria-hidden="true"><span></span> elige un apartado arriba ↑</div>
+            </section>
 
-                <section class="section" id="proyectos" aria-labelledby="proyectos-title">
-                    <div class="container">
-                        <div class="section-heading reveal">
-                            <p class="eyebrow">02 / Proyectos</p>
-                            <h2 id="proyectos-title">Trabajos en <span class="gradient-text">curso</span></h2>
-                            <p class="section-lead">Un escaparate preparado para proyectos personales, prácticas completas y futuros trabajos. Todavía no hay proyectos publicados aquí.</p>
-                        </div>
-
-                        <div class="placeholder-grid reveal">
-                            <article class="placeholder-card">
-                                <span class="placeholder-icon" aria-hidden="true">◈</span>
-                                <span class="status-pill">Espacio listo</span>
-                                <h3>Tu próximo proyecto</h3>
-                                <p>Cuando añadas un proyecto, aparecerá aquí con su descripción, tecnologías y enlaces.</p>
-                            </article>
-                            <article class="placeholder-card placeholder-card--link">
-                                <span class="placeholder-icon" aria-hidden="true">↗</span>
-                                <span class="status-pill status-pill--active">Disponible ya</span>
-                                <h3>Repositorio Java</h3>
-                                <p>Mientras tanto, todo el código fuente está abierto en GitHub.</p>
-                                <a class="inline-link" href="https://github.com/lahuertixx/Java" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
-                            </article>
-                        </div>
+            <section class="section section--alt" aria-labelledby="mapa-title">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">Mapa de LAHU PAGE</p>
+                        <h2 id="mapa-title">Cada cosa en su <span class="gradient-text">sitio</span></h2>
+                        <p class="section-lead">Pulsa cualquier tarjeta para entrar en esa página.</p>
                     </div>
-                </section>
-
-                <section class="section section--alt" id="recursos" aria-labelledby="recursos-title">
-                    <div class="container">
-                        <div class="section-heading reveal">
-                            <p class="eyebrow">03 / Recursos</p>
-                            <h2 id="recursos-title">Apuntes y <span class="gradient-text">enlaces útiles</span></h2>
-                            <p class="section-lead">Material de consulta rápida para seguir aprendiendo sin perder el hilo.</p>
-                        </div>
-
-                        <div class="resource-grid reveal">
-                            <a class="resource-card" href="https://docs.oracle.com/en/java/javase/21/docs/api/" target="_blank" rel="noopener noreferrer">
-                                <span class="resource-icon" aria-hidden="true">{ }</span>
-                                <span class="resource-type">Documentación</span>
-                                <h3>Java SE API</h3>
-                                <p>Referencia oficial de clases, métodos y paquetes.</p>
-                                <span class="resource-arrow" aria-hidden="true">↗</span>
-                            </a>
-                            <a class="resource-card" href="https://docs.oracle.com/javase/tutorial/" target="_blank" rel="noopener noreferrer">
-                                <span class="resource-icon" aria-hidden="true">▤</span>
-                                <span class="resource-type">Tutoriales</span>
-                                <h3>The Java Tutorials</h3>
-                                <p>Guías oficiales, desde los basics hasta conceptos avanzados.</p>
-                                <span class="resource-arrow" aria-hidden="true">↗</span>
-                            </a>
-                            <a class="resource-card" href="https://openjdk.org/" target="_blank" rel="noopener noreferrer">
-                                <span class="resource-icon" aria-hidden="true">◇</span>
-                                <span class="resource-type">Comunidad</span>
-                                <h3>OpenJDK</h3>
-                                <p>El proyecto abierto detrás del runtime de Java.</p>
-                                <span class="resource-arrow" aria-hidden="true">↗</span>
-                            </a>
-                            <a class="resource-card" href="#ejercicios">
-                                <span class="resource-icon" aria-hidden="true">›_</span>
-                                <span class="resource-type">Local</span>
-                                <h3>Ejercicios propios</h3>
-                                <p>Vuelve al listado y abre cualquier archivo <code>.java</code>.</p>
-                                <span class="resource-arrow" aria-hidden="true">→</span>
-                            </a>
-                        </div>
+                    <div class="resource-grid reveal">
+                        <a class="resource-card" href="#/java">
+                            <span class="resource-icon" aria-hidden="true">{ }</span>
+                            <span class="resource-type">Página 01</span>
+                            <h3>Java</h3>
+                            <p>Mis ejercicios reales, con código, explicación y botón de ejecutar.</p>
+                            <span class="resource-arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a class="resource-card" href="#/ejercicios">
+                            <span class="resource-icon" aria-hidden="true">✎</span>
+                            <span class="resource-type">Página 02</span>
+                            <h3>Práctica</h3>
+                            <p>Ejercicios interactivos de Java y HTML para hacer tú mismo.</p>
+                            <span class="resource-arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a class="resource-card" href="#/apuntes">
+                            <span class="resource-icon" aria-hidden="true">▤</span>
+                            <span class="resource-type">Página 03</span>
+                            <h3>Apuntes</h3>
+                            <p>Los temas vistos en clase, ordenados y con ejemplos de código.</p>
+                            <span class="resource-arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a class="resource-card" href="#/proyectos">
+                            <span class="resource-icon" aria-hidden="true">◈</span>
+                            <span class="resource-type">Página 04</span>
+                            <h3>Proyectos</h3>
+                            <p>Trabajos propios y futuros. De momento, el repositorio de Java.</p>
+                            <span class="resource-arrow" aria-hidden="true">→</span>
+                        </a>
                     </div>
-                </section>
-            </main>
+                </div>
+            </section>
         </div>
 
-        <section class="viewer container" id="detalle" aria-labelledby="detalle-titulo" hidden>
-            <div class="viewer-top">
-                <a class="back-link" href="#programacion"><span aria-hidden="true">←</span> Volver al listado</a>
-                <div class="viewer-actions">
-                    <button class="btn btn--small btn--primary" id="copy-btn" type="button">
-                        <span aria-hidden="true">⧉</span> <span class="copy-label">Copiar código</span>
-                    </button>
-                    <a class="btn btn--small btn--ghost" id="open-file" href="#" target="_blank" rel="noopener noreferrer">Abrir archivo <span aria-hidden="true">↗</span></a>
-                    <a class="btn btn--small btn--ghost" id="open-github" href="#" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-                </div>
-            </div>
-
-            <div class="viewer-card">
-                <header class="viewer-header">
-                    <div>
-                        <p class="eyebrow" id="detalle-categoria">Ejercicio Java</p>
-                        <h2 id="detalle-titulo">Cargando…</h2>
-                        <p class="viewer-description" id="detalle-descripcion"></p>
+        <!-- ============ PÁGINA: JAVA ============ -->
+        <div class="page" data-page-panel="java" hidden>
+            <section class="section page-top" aria-labelledby="java-title">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">01 / Java</p>
+                        <h2 id="java-title">Mi código, <span class="gradient-text">explicado</span></h2>
+                        <p class="section-lead">
+                            Cada ejercicio se lee, se explica y se puede ejecutar aquí mismo. El código se descarga del repositorio
+                            y se envía a Wandbox (compilador Java online, sin clave ni registro) para compilarlo y ejecutarlo.
+                            Si el programa pide datos por teclado, escríbelos en la caja de entrada antes de pulsar Ejecutar.
+                        </p>
                     </div>
-                    <div class="viewer-meta" id="detalle-meta"></div>
-                </header>
-                <div class="code-toolbar">
-                    <span class="code-toolbar__file" id="detalle-nombre"></span>
-                    <span class="code-toolbar__lang"><span></span> Java</span>
+
+                    <div class="language-grid reveal">
+                        <article class="language-card language-card--active">
+                            <div class="language-card__top">
+                                <span class="language-glyph">JAVA</span>
+                                <span class="status-pill status-pill--active"><span></span> Activo</span>
+                            </div>
+                            <h3>Java</h3>
+                            <p>Ejercicios de consola, bucles, condicionales, clases y lógica. Código real del repositorio.</p>
+                            <div class="language-card__footer">
+                                <span id="language-count">— archivos .java</span>
+                                <a href="#ejercicios-lista">Explorar <span aria-hidden="true">→</span></a>
+                            </div>
+                        </article>
+                        <article class="language-card language-card--soon">
+                            <div class="language-card__top">
+                                <span class="language-glyph">&lt;/&gt;</span>
+                                <span class="status-pill">Futuro</span>
+                            </div>
+                            <h3>HTML</h3>
+                            <p>Próximo lenguaje. De momento solo dejamos el sitio preparado: ni Python ni nada más.</p>
+                        </article>
+                        <article class="language-card language-card--soon">
+                            <div class="language-card__top">
+                                <span class="language-glyph">JS</span>
+                                <span class="status-pill">Herramienta</span>
+                            </div>
+                            <h3>JavaScript</h3>
+                            <p>Solo está detrás de esta web y de los ejercicios interactivos. No es un apartado de estudio todavía.</p>
+                        </article>
+                    </div>
+
+                    <div class="exercises-panel" id="ejercicios-lista">
+                        <div class="exercises-head reveal">
+                            <div>
+                                <p class="eyebrow">Ejercicios del repositorio</p>
+                                <h3>Explora el código fuente</h3>
+                            </div>
+                            <label class="search-box">
+                                <span aria-hidden="true">⌕</span>
+                                <input type="search" id="search-input" placeholder="Buscar archivo, tema o explicación…" aria-label="Buscar ejercicios">
+                            </label>
+                        </div>
+
+                        <div class="exercises-toolbar reveal" role="group" aria-label="Filtrar ejercicios">
+                            <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">Todos <span id="filter-all-count">0</span></button>
+                            <button class="filter-btn" type="button" data-filter="Problemas" aria-pressed="false">Problemas <span id="filter-problems-count">0</span></button>
+                            <button class="filter-btn" type="button" data-filter="Prácticas" aria-pressed="false">Prácticas <span id="filter-practices-count">0</span></button>
+                        </div>
+
+                        <div class="exercise-grid" id="exercise-grid" aria-live="polite">
+                            <noscript>
+                                <p class="notice">Activa JavaScript para consultar los ejercicios. También puedes abrir los archivos <code>.java</code> directamente en el repositorio.</p>
+                            </noscript>
+                        </div>
+                        <p class="exercise-status" id="exercise-status" role="status">Preparando ejercicios…</p>
+                    </div>
                 </div>
-                <pre class="code-block"><code id="detalle-code"></code></pre>
-                <p class="viewer-error" id="detalle-error" hidden></p>
-            </div>
-        </section>
-    </div>
+            </section>
+
+            <section class="viewer container" id="detalle" aria-labelledby="detalle-titulo" hidden>
+                <div class="viewer-top">
+                    <a class="back-link" href="#/java"><span aria-hidden="true">←</span> Volver al listado</a>
+                    <div class="viewer-actions">
+                        <button class="btn btn--small btn--primary" id="run-btn" type="button">
+                            <span aria-hidden="true">▶</span> <span class="run-label">Ejecutar código</span>
+                        </button>
+                        <button class="btn btn--small btn--ghost" id="copy-btn" type="button">
+                            <span aria-hidden="true">⧉</span> <span class="copy-label">Copiar código</span>
+                        </button>
+                        <a class="btn btn--small btn--ghost" id="open-file" href="#" target="_blank" rel="noopener noreferrer">Archivo <span aria-hidden="true">↗</span></a>
+                        <a class="btn btn--small btn--ghost" id="open-github" href="#" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+
+                <div class="viewer-card">
+                    <header class="viewer-header">
+                        <div>
+                            <p class="eyebrow" id="detalle-categoria">Ejercicio Java</p>
+                            <h2 id="detalle-titulo">Cargando…</h2>
+                            <p class="viewer-description" id="detalle-descripcion"></p>
+                        </div>
+                        <div class="viewer-meta" id="detalle-meta"></div>
+                    </header>
+                    <div class="explain-grid">
+                        <div class="explain-block">
+                            <h3>¿Qué hace?</h3>
+                            <p id="detalle-que"></p>
+                        </div>
+                        <div class="explain-block">
+                            <h3>¿Para qué sirve al estudiar?</h3>
+                            <p id="detalle-para"></p>
+                        </div>
+                    </div>
+                    <div class="code-toolbar">
+                        <span class="code-toolbar__file" id="detalle-nombre"></span>
+                        <span class="code-toolbar__lang"><span></span> Java</span>
+                    </div>
+                    <pre class="code-block"><code id="detalle-code"></code></pre>
+                    <div class="console" id="console-panel" hidden>
+                        <div class="console__bar">
+                            <span><span class="console__dot"></span> Consola · entrada y salida del programa</span>
+                            <button class="console__clear" id="console-clear" type="button">Limpiar</button>
+                        </div>
+                        <label class="console__label" for="console-input">Entrada (lo que escribirías por teclado, un valor por línea):</label>
+                        <textarea class="console__input" id="console-input" rows="3" spellcheck="false" placeholder="Ej.: 5&#10;1&#10;3&#10;4"></textarea>
+                        <pre class="console__body" id="console-output" aria-live="polite"></pre>
+                    </div>
+                    <p class="viewer-error" id="detalle-error" hidden></p>
+                    <p class="viewer-hint" id="detalle-hint"></p>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============ PÁGINA: PRÁCTICA ============ -->
+        <div class="page" data-page-panel="ejercicios" hidden>
+            <section class="section page-top" aria-labelledby="practica-title">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">02 / Práctica</p>
+                        <h2 id="practica-title">Zona <span class="gradient-text">interactiva</span></h2>
+                        <p class="section-lead">
+                            Aquí no te doy la respuesta hecha desde el principio: tú escribes o eliges y la web te corrige al momento.
+                            Hay ejercicios de Java (variables, condicionales, bucles) y de HTML (etiquetas y estructura).
+                        </p>
+                    </div>
+
+                    <div class="practice-tabs reveal" role="tablist" aria-label="Tipo de ejercicios interactivos">
+                        <button class="practice-tab is-active" type="button" role="tab" aria-selected="true" data-tab="java">Java</button>
+                        <button class="practice-tab" type="button" role="tab" aria-selected="false" data-tab="html">HTML</button>
+                    </div>
+
+                    <div id="practice-java" class="practice-list" role="tabpanel">
+                        <article class="practice-card reveal" data-exercise="var-numero">
+                            <div class="practice-card__head">
+                                <span class="tag">Variables</span>
+                                <span class="practice-level">Nivel 1</span>
+                            </div>
+                            <h3>Declara tu edad</h3>
+                            <p>Completa el hueco para declarar un entero llamado <code>edad</code> con valor 16.</p>
+                            <pre class="practice-code">public class Edad {
+    public static void main(String[] args) {
+        ______ edad = 16;
+        System.out.println(edad);
+    }
+}</pre>
+                            <label class="practice-label" for="answer-var-numero">¿Qué va en el hueco?</label>
+                            <input id="answer-var-numero" class="practice-input" type="text" autocomplete="off" spellcheck="false" placeholder="Escribe aquí...">
+                            <div class="practice-actions">
+                                <button class="btn btn--small btn--primary" type="button" data-check="var-numero">Comprobar</button>
+                                <button class="btn btn--small btn--ghost" type="button" data-hint="var-numero">Pista</button>
+                            </div>
+                            <p class="practice-feedback" id="feedback-var-numero" role="status"></p>
+                        </article>
+
+                        <article class="practice-card reveal" data-exercise="condicion">
+                            <div class="practice-card__head">
+                                <span class="tag">Condicionales</span>
+                                <span class="practice-level">Nivel 1</span>
+                            </div>
+                            <h3>Mayor de edad</h3>
+                            <p>El programa debe imprimir <code>"Mayor"</code> solo si <code>edad</code> es 18 o más. Completa la condición.</p>
+                            <pre class="practice-code">int edad = 18;
+if (______) {
+    System.out.println("Mayor");
+}</pre>
+                            <label class="practice-label" for="answer-condicion">Condición:</label>
+                            <input id="answer-condicion" class="practice-input" type="text" autocomplete="off" spellcheck="false" placeholder="Escribe aquí...">
+                            <div class="practice-actions">
+                                <button class="btn btn--small btn--primary" type="button" data-check="condicion">Comprobar</button>
+                                <button class="btn btn--small btn--ghost" type="button" data-hint="condicion">Pista</button>
+                            </div>
+                            <p class="practice-feedback" id="feedback-condicion" role="status"></p>
+                        </article>
+
+                        <article class="practice-card reveal" data-exercise="bucle">
+                            <div class="practice-card__head">
+                                <span class="tag">Bucles</span>
+                                <span class="practice-level">Nivel 2</span>
+                            </div>
+                            <h3>Cuenta del 1 al 5</h3>
+                            <p>Completa el <code>for</code> para que imprima los números del 1 al 5, ambos incluidos.</p>
+                            <pre class="practice-code">for (int i = 1; ______; i++) {
+    System.out.println(i);
+}</pre>
+                            <label class="practice-label" for="answer-bucle">Condición del bucle:</label>
+                            <input id="answer-bucle" class="practice-input" type="text" autocomplete="off" spellcheck="false" placeholder="Escribe aquí...">
+                            <div class="practice-actions">
+                                <button class="btn btn--small btn--primary" type="button" data-check="bucle">Comprobar</button>
+                                <button class="btn btn--small btn--ghost" type="button" data-hint="bucle">Pista</button>
+                            </div>
+                            <p class="practice-feedback" id="feedback-bucle" role="status"></p>
+                        </article>
+                    </div>
+
+                    <div id="practice-html" class="practice-list" role="tabpanel" hidden>
+                        <article class="practice-card reveal" data-exercise="html-titulo">
+                            <div class="practice-card__head">
+                                <span class="tag">Etiquetas</span>
+                                <span class="practice-level">Nivel 1</span>
+                            </div>
+                            <h3>El título de la página</h3>
+                            <p>¿Qué etiqueta va en el hueco para poner el título que aparece en la pestaña del navegador?</p>
+                            <pre class="practice-code">&lt;head&gt;
+    &lt;______&gt;LAHU PAGE&lt;/______&gt;
+&lt;/head&gt;</pre>
+                            <label class="practice-label" for="answer-html-titulo">Nombre de la etiqueta:</label>
+                            <input id="answer-html-titulo" class="practice-input" type="text" autocomplete="off" spellcheck="false" placeholder="Escribe aquí...">
+                            <div class="practice-actions">
+                                <button class="btn btn--small btn--primary" type="button" data-check="html-titulo">Comprobar</button>
+                                <button class="btn btn--small btn--ghost" type="button" data-hint="html-titulo">Pista</button>
+                            </div>
+                            <p class="practice-feedback" id="feedback-html-titulo" role="status"></p>
+                        </article>
+
+                        <article class="practice-card reveal" data-exercise="html-parrafo">
+                            <div class="practice-card__head">
+                                <span class="tag">Estructura</span>
+                                <span class="practice-level">Nivel 1</span>
+                            </div>
+                            <h3>Un párrafo</h3>
+                            <p>Completa la etiqueta que se usa para escribir un párrafo de texto.</p>
+                            <pre class="practice-code">&lt;______&gt;Hola, soy Lahuertix.&lt;/______&gt;</pre>
+                            <label class="practice-label" for="answer-html-parrafo">Nombre de la etiqueta:</label>
+                            <input id="answer-html-parrafo" class="practice-input" type="text" autocomplete="off" spellcheck="false" placeholder="Escribe aquí...">
+                            <div class="practice-actions">
+                                <button class="btn btn--small btn--primary" type="button" data-check="html-parrafo">Comprobar</button>
+                                <button class="btn btn--small btn--ghost" type="button" data-hint="html-parrafo">Pista</button>
+                            </div>
+                            <p class="practice-feedback" id="feedback-html-parrafo" role="status"></p>
+                        </article>
+
+                        <article class="practice-card reveal" data-exercise="html-enlace">
+                            <div class="practice-card__head">
+                                <span class="tag">Enlaces</span>
+                                <span class="practice-level">Nivel 2</span>
+                            </div>
+                            <h3>Un enlace</h3>
+                            <p>¿Qué atributo de <code>&lt;a&gt;</code> guarda la dirección a la que va el enlace?</p>
+                            <pre class="practice-code">&lt;a ______="https://github.com/lahuertixx/Java"&gt;Mi repo&lt;/a&gt;</pre>
+                            <label class="practice-label" for="answer-html-enlace">Atributo:</label>
+                            <input id="answer-html-enlace" class="practice-input" type="text" autocomplete="off" spellcheck="false" placeholder="Escribe aquí...">
+                            <div class="practice-actions">
+                                <button class="btn btn--small btn--primary" type="button" data-check="html-enlace">Comprobar</button>
+                                <button class="btn btn--small btn--ghost" type="button" data-hint="html-enlace">Pista</button>
+                            </div>
+                            <p class="practice-feedback" id="feedback-html-enlace" role="status"></p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============ PÁGINA: APUNTES ============ -->
+        <div class="page" data-page-panel="apuntes" hidden>
+            <section class="section page-top" aria-labelledby="apuntes-title">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">03 / Apuntes</p>
+                        <h2 id="apuntes-title">Apuntes de <span class="gradient-text">clase</span></h2>
+                        <p class="section-lead">Los temas que hemos dado, organizados. Cada uno con su ejemplo de código y su utilidad.</p>
+                    </div>
+
+                    <div class="notes-layout reveal">
+                        <nav class="notes-nav" aria-label="Temas de apuntes">
+                            <button class="notes-nav__item is-active" type="button" data-note="variables">1. Variables y tipos</button>
+                            <button class="notes-nav__item" type="button" data-note="entrada">2. Entrada con Scanner</button>
+                            <button class="notes-nav__item" type="button" data-note="condicionales">3. Condicionales</button>
+                            <button class="notes-nav__item" type="button" data-note="bucles">4. Bucles</button>
+                            <button class="notes-nav__item" type="button" data-note="arrays">5. Arrays y cadenas</button>
+                            <button class="notes-nav__item" type="button" data-note="clases">6. Clases y objetos</button>
+                            <button class="notes-nav__item" type="button" data-note="html">7. HTML (futuro)</button>
+                        </nav>
+
+                        <div class="notes-content">
+                            <article class="note" data-note-panel="variables">
+                                <p class="eyebrow">Tema 1 · Java</p>
+                                <h3>Variables y tipos</h3>
+                                <p>Una variable es un espacio con nombre donde guardamos un valor. En Java hay que decir siempre de qué tipo es: <code>int</code> para enteros, <code>double</code> para decimales, <code>String</code> para texto, <code>boolean</code> para verdadero/falso y <code>char</code> para un carácter.</p>
+                                <pre class="code-block code-block--note"><code class="language-java">int edad = 16;
+double nota = 8.5;
+String nombre = "Martin";
+boolean aprobado = true;
+char inicial = 'M';
+System.out.println(nombre + " tiene " + edad + " años");</code></pre>
+                                <p><strong>Para qué sirve:</strong> es la base de todo programa. saber elegir el tipo evita errores, por ejemplo usar <code>int</code> para una nota con decimales te perdería el <code>8.5</code>.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="entrada" hidden>
+                                <p class="eyebrow">Tema 2 · Java</p>
+                                <h3>Entrada de datos con Scanner</h3>
+                                <p><code>Scanner</code> lee lo que escribe el usuario por teclado. Primero se importa, luego se crea el objeto y después se usa <code>nextLine()</code> para texto o <code>nextInt()</code> para enteros.</p>
+                                <pre class="code-block code-block--note"><code class="language-java">import java.util.Scanner;
+
+public class Datos {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Tu nombre: ");
+        String nombre = teclado.nextLine();
+        System.out.print("Tu edad: ");
+        int edad = teclado.nextInt();
+        System.out.println("Hola " + nombre + ", tienes " + edad);
+    }
+}</code></pre>
+                                <p><strong>Para qué sirve:</strong> hace que los programas interactúen con quien los usa. Aparece en casi todos los ejercicios del repositorio: <code>FichaAlumno</code>, <code>MiMatricula</code>, <code>MiEscaner</code>…</p>
+                            </article>
+
+                            <article class="note" data-note-panel="condicionales" hidden>
+                                <p class="eyebrow">Tema 3 · Java</p>
+                                <h3>Condicionales: if / else</h3>
+                                <p>Sirven para tomar decisiones. Si la condición es verdadera se ejecuta el primer bloque; si no, pasa al <code>else if</code> o al <code>else</code>. Se comparan con <code>==</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code> y <code>!=</code>.</p>
+                                <pre class="code-block code-block--note"><code class="language-java">int nota = 7;
+if (nota &lt; 5) {
+    System.out.println("Insuficiente");
+} else if (nota &lt; 7) {
+    System.out.println("Bien");
+} else {
+    System.out.println("Notable o más");
+}</code></pre>
+                                <p><strong>Para qué sirve:</strong> para clasificar resultados o validar datos. Lo ves en <code>Problema_05</code> (notas) y en <code>MiPrueba</code> (mayor o menor de edad).</p>
+                            </article>
+
+                            <article class="note" data-note-panel="bucles" hidden>
+                                <p class="eyebrow">Tema 4 · Java</p>
+                                <h3>Bucles: for, while y do-while</h3>
+                                <p>Un bucle repite código. <code>for</code> se usa cuando sabes cuántas veces; <code>while</code> mientras se cumpla una condición; <code>do-while</code> al menos una vez sí o sí, porque comprueba al final.</p>
+                                <pre class="code-block code-block--note"><code class="language-java">// del 1 al 5
+for (int i = 1; i &lt;= 5; i++) {
+    System.out.println(i);
+}
+
+// pedir un número válido (al menos una vez)
+int n;
+do {
+    System.out.print("Del 1 al 10: ");
+    n = teclado.nextInt();
+} while (n &lt; 1 || n &gt; 10);</code></pre>
+                                <p><strong>Para qué sirve:</strong> para repetir sin escribir lo mismo mil veces y para validar entradas. Está en <code>Problema_02</code>, <code>Problema_07</code> y <code>Problema_11</code>.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="arrays" hidden>
+                                <p class="eyebrow">Tema 5 · Java</p>
+                                <h3>Arrays y cadenas</h3>
+                                <p>Un array guarda varios valores del mismo tipo en posiciones que empiezan en 0. Un <code>String</code> es una cadena de texto con métodos como <code>length()</code>, <code>charAt()</code> o <code>equals()</code>.</p>
+                                <pre class="code-block code-block--note"><code class="language-java">int[] notas = {5, 7, 9};
+System.out.println(notas[0]);        // 5
+System.out.println(notas.length);    // 3
+
+String nombre = "Lahuertix";
+System.out.println(nombre.length()); // 9
+System.out.println(nombre.charAt(0));// L</code></pre>
+                                <p><strong>Para qué sirve:</strong> para trabajar con listas de datos, como las mediciones de <code>Problema_03</code> o los productos de <code>MisDatos</code>.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="clases" hidden>
+                                <p class="eyebrow">Tema 6 · Java</p>
+                                <h3>Clases y objetos</h3>
+                                <p>Una clase es el molde; un objeto es una instancia de ese molde. Los atributos guardan su estado y los métodos su comportamiento. El constructor se llama igual que la clase y sirve para inicializar.</p>
+                                <pre class="code-block code-block--note"><code class="language-java">public class Contador {
+    int valor;
+    public Contador() { valor = 0; }
+    public void incrementar() { valor++; }
+    public int consultarValor() { return valor; }
+}
+
+Contador c = new Contador();
+c.incrementar();
+System.out.println(c.consultarValor()); // 1</code></pre>
+                                <p><strong>Para qué sirve:</strong> para organizar programas grandes y reutilizar código. Es exactamente lo que hace tu archivo <code>Contador.java</code>.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="html" hidden>
+                                <p class="eyebrow">Tema 7 · Próximo lenguaje</p>
+                                <h3>HTML (se verá más adelante)</h3>
+                                <p>HTML no es un lenguaje de programación, es de marcado: describe la estructura de una página con etiquetas. Esta web ya está hecha con él, así que puedes practicar en la pestaña HTML de la zona interactiva.</p>
+                                <pre class="code-block code-block--note"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;&lt;title&gt;LAHU PAGE&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hola&lt;/h1&gt;
+    &lt;p&gt;Mi primera página&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                <p><strong>Para qué sirve:</strong> será el siguiente apartado que se añadirá a LAHU PAGE. Ni Python ni otros lenguajes por ahora, solo HTML en el futuro.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============ PÁGINA: PROYECTOS ============ -->
+        <div class="page" data-page-panel="proyectos" hidden>
+            <section class="section page-top" aria-labelledby="proyectos-title">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">04 / Proyectos</p>
+                        <h2 id="proyectos-title">Trabajos en <span class="gradient-text">curso</span></h2>
+                        <p class="section-lead">Un escaparate para prácticas completas y futuros proyectos. Por ahora está el repositorio de Java y la propia LAHU PAGE.</p>
+                    </div>
+                    <div class="placeholder-grid reveal">
+                        <article class="placeholder-card">
+                            <span class="placeholder-icon" aria-hidden="true">◈</span>
+                            <span class="status-pill">En construcción</span>
+                            <h3>LAHU PAGE</h3>
+                            <p>Esta web. Irá creciendo con nuevos apartados, ejercicios y proyectos a medida que aprenda.</p>
+                        </article>
+                        <article class="placeholder-card placeholder-card--link">
+                            <span class="placeholder-icon" aria-hidden="true">↗</span>
+                            <span class="status-pill status-pill--active">Disponible ya</span>
+                            <h3>Repositorio Java</h3>
+                            <p>Todo el código fuente de los ejercicios, abierto en GitHub.</p>
+                            <a class="inline-link" href="https://github.com/lahuertixx/Java" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============ PÁGINA: CONTACTO ============ -->
+        <div class="page" data-page-panel="contacto" hidden>
+            <section class="section page-top" aria-labelledby="contacto-title">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">05 / Contacto</p>
+                        <h2 id="contacto-title">Escríbeme o <span class="gradient-text">pásate por GitHub</span></h2>
+                        <p class="section-lead">Si tienes una idea, un ejercicio o quieres decirme algo, aquí estoy.</p>
+                    </div>
+                    <div class="contact-grid reveal">
+                        <a class="contact-card" id="email-link" href="mailto:hola@ejemplo.com">
+                            <span class="resource-icon" aria-hidden="true">✉</span>
+                            <span class="resource-type">Correo electrónico</span>
+                            <h3 id="email-text">hola@ejemplo.com</h3>
+                            <p>Abrir el correo <span aria-hidden="true">↗</span></p>
+                        </a>
+                        <a class="contact-card" href="https://github.com/lahuertixx" target="_blank" rel="noopener noreferrer">
+                            <span class="resource-icon" aria-hidden="true">⌘</span>
+                            <span class="resource-type">Perfil</span>
+                            <h3>lahuertixx en GitHub</h3>
+                            <p>Ver perfil y repositorios <span aria-hidden="true">↗</span></p>
+                        </a>
+                    </div>
+                    <div class="notice contact-note">
+                        <strong>Nota:</strong> el correo está centralizado en <code>js/config.js</code>. Cambia <code>EMAIL</code> ahí y se actualiza solo en toda la web.
+                        El asistente de IA (modo tutor, sin soluciones) queda guardado para más adelante: GitHub Pages no permite claves privadas de API.
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
-            <div class="footer-brand"><span class="brand-mark" aria-hidden="true">{ }</span> Java<span class="brand-dot">.</span> <span class="footer-sub">learning log</span></div>
+            <div class="footer-brand"><span class="brand-mark" aria-hidden="true">L</span> LAHU<span class="brand-dot"> PAGE</span> <span class="footer-sub">by Lahuertix</span></div>
             <div class="footer-links">
                 <a href="https://github.com/lahuertixx/Java" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-                <a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+                <a href="#/contacto">Contacto <span aria-hidden="true">✉</span></a>
+                <a href="#/inicio">Volver arriba <span aria-hidden="true">↑</span></a>
             </div>
-            <p>© <span id="year">2026</span> Java · Diseñado con HTML, CSS y JavaScript vanilla.</p>
+            <p>© <span id="year">2026</span> LAHU PAGE · Hecho con HTML, CSS y JavaScript vanilla. El código Java se compila con Wandbox al pulsar Ejecutar.</p>
         </div>
     </footer>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+    <script src="js/config.js" defer></script>
     <script src="js/exercises.js" defer></script>
+    <script src="js/explanations.js" defer></script>
     <script src="js/script.js" defer></script>
 </body>
 </html>
