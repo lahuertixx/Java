@@ -58,7 +58,7 @@
                         </div>
                         <dl class="hero-stats">
                             <div><dt>Ejercicios Java</dt><dd id="stat-exercises">—</dd></div>
-                            <div><dt>Apuntes</dt><dd>7</dd></div>
+                            <div><dt>Apuntes</dt><dd>18</dd></div>
                             <div><dt>Dependencias</dt><dd>0</dd></div>
                         </dl>
                     </div>
@@ -405,6 +405,17 @@ if (______) {
                             <button class="notes-nav__item" type="button" data-note="arrays">5. Arrays y cadenas</button>
                             <button class="notes-nav__item" type="button" data-note="clases">6. Clases y objetos</button>
                             <button class="notes-nav__item" type="button" data-note="html">7. HTML (futuro)</button>
+                            <button class="notes-nav__item" type="button" data-note="algoritmos">8. Algoritmos y problemas</button>
+                            <button class="notes-nav__item" type="button" data-note="java-basico">9. Java: JDK y compilación</button>
+                            <button class="notes-nav__item" type="button" data-note="estructuras">10. Tipos y estructuras</button>
+                            <button class="notes-nav__item" type="button" data-note="poo">11. Fundamentos de POO</button>
+                            <button class="notes-nav__item" type="button" data-note="bd-conceptos">12. BD y SGBD</button>
+                            <button class="notes-nav__item" type="button" data-note="bd-er">13. Modelo entidad-relación</button>
+                            <button class="notes-nav__item" type="button" data-note="sistemas">14. Sistemas operativos</button>
+                            <button class="notes-nav__item" type="button" data-note="digitalizacion">15. Digitalización e IT/OT</button>
+                            <button class="notes-nav__item" type="button" data-note="entornos">16. Entornos y Git</button>
+                            <button class="notes-nav__item" type="button" data-note="marcas">17. Lenguajes de marcado</button>
+                            <button class="notes-nav__item" type="button" data-note="html-xhtml">18. HTML y XHTML</button>
                         </nav>
 
                         <div class="notes-content">
@@ -517,6 +528,136 @@ System.out.println(c.consultarValor()); // 1</code></pre>
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
                                 <p><strong>Para qué sirve:</strong> será el siguiente apartado que se añadirá a LAHU PAGE. Ni Python ni otros lenguajes por ahora, solo HTML en el futuro.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="algoritmos" hidden>
+                                <p class="eyebrow">Tema 8 · Programación</p>
+                                <h3>Algoritmos y resolución de problemas</h3>
+                                <p>Un algoritmo es una sucesión ordenada y finita de pasos para resolver un problema. El trabajo se divide en analizar el problema, diseñar el algoritmo, implementarlo y mantenerlo.</p>
+                                <pre class="code-block code-block--note"><code class="language-text">1. Leer tres números
+2. Sumarlos
+3. Dividir la suma entre 3
+4. Mostrar la media</code></pre>
+                                <p><strong>Para qué sirve:</strong> separar «qué hay que hacer» de «cómo se escribe en Java» evita errores. Técnicas útiles: hacer preguntas, buscar semejanzas, dividir y vencer, y probar con datos pequeños.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="java-basico" hidden>
+                                <p class="eyebrow">Tema 9 · Programación</p>
+                                <h3>Java: JDK, compilación y estructura</h3>
+                                <p>El JDK incluye el compilador <code>javac</code> y la JVM. El código fuente <code>.java</code> se compila a bytecode <code>.class</code> y la JVM lo ejecuta. El método <code>main</code> es el punto de entrada.</p>
+                                <pre class="code-block code-block--note"><code class="language-bash">javac MiPrimerPrograma.java
+java MiPrimerPrograma</code></pre>
+                                <p><strong>Para qué sirve:</strong> el mismo programa funciona en Eclipse, IntelliJ o VS Code porque quien compila es el JDK; el IDE solo ayuda a escribir y organizar el código.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="estructuras" hidden>
+                                <p class="eyebrow">Tema 10 · Programación</p>
+                                <h3>Tipos, literales y estructuras de control</h3>
+                                <p>Java dispone de enteros, decimales, caracteres, cadenas y booleanos. Los literales pueden escribirse en decimal, hexadecimal (<code>0x</code>), octal (<code>0</code>) o binario (<code>0b</code>); para <code>long</code> se usa el sufijo <code>L</code>.</p>
+                                <pre class="code-block code-block--note"><code class="language-java">int n = 0b1010;            // 10
+long grande = 5_000_000_000L;
+if (n &gt; 5) {
+    System.out.println("mayor que 5");
+}
+for (int i = 1; i &lt;= 5; i++) {
+    System.out.println(i);
+}</code></pre>
+                                <p><strong>Para qué sirve:</strong> elegir el tipo correcto evita perder información (por ejemplo, usar <code>int</code> para una nota con decimales) y los bucles permiten repetir sin copiar código.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="poo" hidden>
+                                <p class="eyebrow">Tema 11 · Programación</p>
+                                <h3>Fundamentos de la programación orientada a objetos</h3>
+                                <p>Una clase es la plantilla y un objeto es una instancia creada con <code>new</code>. La abstracción muestra solo lo relevante y la encapsulación protege el estado interno. Las referencias están en la pila (<em>stack</em>) y los objetos en el montón (<em>heap</em>).</p>
+                                <pre class="code-block code-block--note"><code class="language-java">public class Contador {
+    private int valor;
+    public void incrementar() { valor++; }
+    public int consultarValor() { return valor; }
+}
+
+Contador c = new Contador();
+c.incrementar();
+System.out.println(c.consultarValor()); // 1</code></pre>
+                                <p><strong>Para qué sirve:</strong> organizar programas grandes, reutilizar código y controlar qué se puede modificar desde fuera de la clase.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="bd-conceptos" hidden>
+                                <p class="eyebrow">Tema 12 · Bases de datos</p>
+                                <h3>Bases de datos y SGBD</h3>
+                                <p>Una base de datos guarda datos relacionados con la menor redundancia posible; el SGBD es el software que los define, administra y consulta. Los niveles de abstracción son interno (cómo se guarda), conceptual (estructura global) y externo (lo que ve cada usuario).</p>
+                                <pre class="code-block code-block--note"><code class="language-sql">CREATE TABLE Alumno (id INT PRIMARY KEY, nombre VARCHAR(50));
+INSERT INTO Alumno VALUES (1, 'Ana');
+SELECT nombre FROM Alumno WHERE id = 1;
+GRANT SELECT ON Alumno TO profesor;</code></pre>
+                                <p><strong>Para qué sirve:</strong> DDL crea estructuras (<code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>), DML mueve datos (<code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>) y DCL gestiona permisos (<code>GRANT</code>, <code>REVOKE</code>).</p>
+                            </article>
+
+                            <article class="note" data-note-panel="bd-er" hidden>
+                                <p class="eyebrow">Tema 13 · Bases de datos</p>
+                                <h3>Modelo entidad-relación</h3>
+                                <p>En el diseño conceptual se representan entidades, atributos y relaciones con su cardinalidad. Una entidad débil depende de otra para identificarse; una jerarquía ISA especializa una entidad en subtipos excluyentes o solapados.</p>
+                                <pre class="code-block code-block--note"><code class="language-text">MAQUINARIA ---tiene---&gt; PARTE_AVERIA (débil)
+EMPLEADO &lt;--- ISA --- MECANICO | OPERADOR
+antiguedad = fecha_actual - fecha_alta  (derivado)</code></pre>
+                                <p><strong>Para qué sirve:</strong> convertir un enunciado en tablas SQL sin perder información: detectar claves, relaciones 1:N o N:M y atributos compuestos o multivaluados antes de crear el esquema.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="sistemas" hidden>
+                                <p class="eyebrow">Tema 14 · Sistemas informáticos</p>
+                                <h3>Sistemas operativos e instalación</h3>
+                                <p>El sistema operativo gestiona hardware, procesos, memoria, archivos y dispositivos. Puede ser monousuario o multiusuario, mono o multitarea, de red, embebido o de tiempo real. Antes de instalar hay que revisar requisitos, preparar el almacenamiento y el medio de arranque.</p>
+                                <pre class="code-block code-block--note"><code class="language-bash">uname -r
+lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINTS
+sudo apt update &amp;&amp; sudo apt upgrade</code></pre>
+                                <p><strong>Para qué sirve:</strong> la virtualización permite probar un sistema sin tocar el equipo real, y las copias de seguridad con puntos de restauración permiten recuperarse de un fallo.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="digitalizacion" hidden>
+                                <p class="eyebrow">Tema 15 · Digitalización</p>
+                                <h3>Digitalización, Industria 4.0 y entornos IT/OT</h3>
+                                <p>Digitalizar es pasar información a formato digital; digitalizar procesos es cambiar cómo se hacen; la transformación digital replantea la organización. IT es el negocio (ERP, CRM, SGBD) y OT es la planta (sensores, PLC, HMI, SCADA).</p>
+                                <pre class="code-block code-block--note"><code class="language-text">papel → escaneo → PDF        (digitalización de información)
+pedido → datos → registro → responsable  (digitalización de proceso)
+IT (oficina) &lt;── integración ──&gt; OT (producción)</code></pre>
+                                <p><strong>Para qué sirve:</strong> entender de dónde salen los datos que luego guardamos en una base de datos y por qué conectar IT y OT reduce esperas y errores.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="entornos" hidden>
+                                <p class="eyebrow">Tema 16 · Entornos de desarrollo</p>
+                                <h3>IDE, JDK, Maven, Git y Scrum</h3>
+                                <p>VS Code es un editor que necesita extensiones para Java; IntelliJ y Eclipse son IDE con muchas funciones integradas. En los tres el JDK compila el mismo código y Maven gestiona dependencias y ciclo de vida. Git controla versiones y Jira/Scrum organiza el trabajo en sprints.</p>
+                                <pre class="code-block code-block--note"><code class="language-bash">git clone https://github.com/lahuertixx/Java.git
+git status
+git add .
+git commit -m "Añadir apuntes"
+git push</code></pre>
+                                <p><strong>Para qué sirve:</strong> saber qué hace cada herramienta: el IDE edita, el JDK compila, Maven construye, Git guarda versiones y el <em>backlog</em> decide qué se hace en cada sprint.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="marcas" hidden>
+                                <p class="eyebrow">Tema 17 · Lenguaje de marcas</p>
+                                <h3>De SGML a HTML y XML</h3>
+                                <p>Un lenguaje de marcado describe la estructura del contenido con etiquetas; no es un lenguaje de programación porque no ejecuta instrucciones. HTML deriva de SGML y XML es un metalenguaje usado para definir otros formatos.</p>
+                                <pre class="code-block code-block--note"><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;alumno&gt;
+  &lt;nombre&gt;Ana&lt;/nombre&gt;
+  &lt;nota&gt;8.5&lt;/nota&gt;
+&lt;/alumno&gt;</code></pre>
+                                <p><strong>Para qué sirve:</strong> distinguir una etiqueta (apertura, cierre y atributos) de una sentencia Java; es la base para leer el HTML de esta web.</p>
+                            </article>
+
+                            <article class="note" data-note-panel="html-xhtml" hidden>
+                                <p class="eyebrow">Tema 18 · Lenguaje de marcas</p>
+                                <h3>HTML y XHTML: estructura y formularios</h3>
+                                <p>HTML define el contenido de una página con elementos formados por etiquetas de apertura, cierre y atributos. XHTML es más estricto: todo se cierra, las etiquetas van en minúsculas y los atributos entre comillas.</p>
+                                <pre class="code-block code-block--note"><code class="language-html">&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Asignatura&lt;/th&gt;&lt;td&gt;Programación&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;form action="/enviar" method="post"&gt;
+  &lt;label for="nombre"&gt;Nombre&lt;/label&gt;
+  &lt;input id="nombre" name="nombre" required /&gt;
+&lt;/form&gt;</code></pre>
+                                <p><strong>Para qué sirve:</strong> crear tablas, formularios y contenido multimedia con marcado válido y semántico; es la base de LAHU PAGE.</p>
                             </article>
                         </div>
                     </div>

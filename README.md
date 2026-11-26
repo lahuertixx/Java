@@ -9,6 +9,10 @@ Mi página web personal (por Lahuertix). Un solo sitio con apartados separados:
 - **Proyectos**: escaparate de trabajos.
 - **Contacto**: correo y GitHub.
 
+## Apuntes
+
+La pestaña **Apuntes** reúne 18 temas con ejemplos para repasar: Java y programación (algoritmos, compilación, estructuras y POO), bases de datos (SGBD, SQL y entidad-relación), sistemas informáticos, digitalización e IT/OT, entornos de desarrollo/Git y lenguajes de marcas (HTML y XHTML). El contenido está resumido de los PDF del curso guardados en `Descargas`.
+
 ## Ejecutar ejercicios
 
 Al pulsar **Ejecutar código**, el código se envía a [Wandbox](https://wandbox.org/) (compilador Java online, sin clave ni registro). Si un programa pide datos por teclado, escríbelos en la caja **Entrada**, uno por línea. Si no hay conexión, la consola muestra el comando para hacerlo en local:
