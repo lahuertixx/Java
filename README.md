@@ -11,7 +11,7 @@ Mi página web personal (por Lahuertix). Un solo sitio con apartados separados:
 
 ## Apuntes
 
-La pestaña **Apuntes** reúne 18 temas repartidos en 5 temarios: Programación Java, Bases de datos, Sistemas y digitalización, Entornos de desarrollo y Lenguajes de marcado. Cada tema tiene explicación, un ejemplo de código y el resultado esperado, con notas sobre qué ocurre en cada caso. El contenido está resumido de los PDF del curso guardados en `Descargas`.
+La pestaña **Apuntes** reúne 35 temas repartidos en 5 temarios: Programación Java, Bases de datos, Sistemas y digitalización, Entornos de desarrollo y Lenguajes de marcado. Cada tema tiene una explicación extensa, un resumen de ideas clave, ejemplos con su resultado esperado y notas sobre qué ocurre y para qué sirve. El contenido está ampliado a partir de los PDF y documentos del curso guardados en `Descargas`.
 
 ## Ejecutar ejercicios
 
