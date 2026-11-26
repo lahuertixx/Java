@@ -1861,6 +1861,28 @@ section[id] {
     box-shadow: inset 2px 0 0 var(--blue);
 }
 
+.notes-nav__group + .notes-nav__group {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.notes-nav__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 13px 8px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a9c5ff;
+}
+
+.notes-nav__label span {
+    color: var(--faint);
+}
+
 .notes-content {
     min-width: 0;
 }
@@ -1914,6 +1936,68 @@ section[id] {
     padding: 0;
     color: #cfe0ff;
     background: transparent;
+}
+
+.notes-group + .notes-group {
+    margin-top: 28px;
+}
+
+.notes-group__head {
+    margin-bottom: 18px;
+    padding: 20px 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: linear-gradient(120deg, rgba(91, 140, 255, 0.12), rgba(91, 140, 255, 0.02));
+}
+
+.notes-group__head h3 {
+    margin: 8px 0 6px;
+    font-size: clamp(20px, 2.6vw, 26px);
+}
+
+.notes-group__head p:last-child {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+.note-example {
+    margin: 20px 0;
+    padding: 18px;
+    border: 1px dashed rgba(91, 140, 255, 0.35);
+    border-radius: var(--radius-sm);
+    background: rgba(91, 140, 255, 0.04);
+}
+
+.note-example__label {
+    margin: 0 0 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #a9c5ff;
+}
+
+.note-example .code-block--note {
+    margin: 0 0 12px;
+}
+
+.note-output {
+    margin: 0 0 12px;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: #d7ffe4;
+    background: rgba(16, 32, 26, 0.75);
+    overflow-x: auto;
+}
+
+.note-example > p:last-child {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--muted);
 }
 
 /* ---------- Contacto ---------- */
@@ -1975,12 +2059,24 @@ section[id] {
         flex: 1 1 auto;
         white-space: nowrap;
     }
+
+    .notes-nav__group {
+        flex: 1 1 200px;
+    }
+
+    .notes-nav__label {
+        width: 100%;
+    }
 }
 
 @media (max-width: 640px) {
     .explain-block,
     .note {
         padding: 20px;
+    }
+
+    .note-example {
+        padding: 14px;
     }
 
     .console {

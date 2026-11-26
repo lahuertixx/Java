@@ -644,13 +644,19 @@
     function setupNotes() {
         const buttons = Array.prototype.slice.call(document.querySelectorAll('.notes-nav__item'));
         const notes = Array.prototype.slice.call(document.querySelectorAll('[data-note-panel]'));
+        const groups = Array.prototype.slice.call(document.querySelectorAll('[data-note-group]'));
         buttons.forEach(function (button) {
             button.addEventListener('click', function () {
                 buttons.forEach(function (other) {
-                    other.classList.toggle('is-active', other === button);
+                    const active = other === button;
+                    other.classList.toggle('is-active', active);
+                    other.setAttribute('aria-pressed', String(active));
                 });
                 notes.forEach(function (note) {
                     note.hidden = note.dataset.notePanel !== button.dataset.note;
+                });
+                groups.forEach(function (group) {
+                    group.hidden = !group.querySelector('[data-note-panel="' + button.dataset.note + '"]');
                 });
                 observeReveals();
             });
